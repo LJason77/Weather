@@ -11,3 +11,25 @@ lto = "fat"
 panic = "abort"
 
 [dependencies]
+bson = "2.0"
+rand = "0.8"
+
+[dependencies.chrono]
+version = "0.4"
+default-features = false
+features = ["serde", "clock"]
+
+[dependencies.mongodb]
+version = "2.0"
+default-features = false
+features = ["async-std-runtime"]
+
+[dependencies.serde]
+version = "1.0"
+default-features = false
+features = ["derive"]
+
+[dev-dependencies.tokio]
+version = "1.12"
+default-features = false
+features = ["rt-multi-thread", "macros"]
